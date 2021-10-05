@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- ROBOTO FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- FAVICON -->
+    <link rel="icon" href="./assets/favicon.png">
+    <title>Librería</title>
+</head>
+
+<body data-dark>
+
+    <!-------------------------------- HEADER ------------------------------------------>
+    <header class="header">
+        <section class="header-content container">
+            <img class="logo-image" src="assets/favicon.png" alt="Libros">
+            <h1 class="title">Mi librería virtual</h1>
+        </section>
+    </header>
+    <!-------------------------------- MAIN ------------------------------------------>
+    <main>
+        <section class="books container"></section>
+
+        <button class="btn-open-form btn"><i class="fas fa-plus"></i></button>
+        <button class="btn-theme btn"><i class="fas fa-moon"></i></button>
+
+        <template id="template-card">
+            <article class="book">
+                <h3 class="book-title"></h3>
+                <h4 class="book-author"></h4>
+                <h4 class="book-pages"></h4>
+                <div class="book-status-container">
+                    <h5>Marcar como leído:</h5>
+                    <div class="book-status">
+                        <button class="btn-status" type="button"></button>
+                    </div>
+                </div>
+                <button class="btn-delete" type="button">x</button>
+            </article>
+        </template>
+
+        <section class="modal">
+            <section class="modal-container" data-dark>
+                <form id="form" class="form" autocomplete="off">
+                    <legend>Agrega un nuevo libro</legend>
+
+                    <input id="titulo" type="text" name="titulo" placeholder="Título"
+                        title="El nombre del libro es requerido" required>
+                    <input id="autor" type="text" name="autor" placeholder="Autor"
+                        title="El nombre del autor es requerido" required>
+                    <input id="paginas" type="number" name="paginas" min="1" title="El numero de paginas es requerido"
+                        placeholder="Numero de paginas" required>
+                    <div>
+                        <label for="estatus">¿Has leído el libro?</label>
+                        <input id="estatus" type="checkbox" name="estatus">
+                    </div>
+
+                    <input class="btn-add" type="submit" value="Agregar">
+
+                </form>
+                <button class="btn-close-form">x</button>
+            </section>
+        </section>
+
+    </main>
+
+    <!-------------------------------- FOOTER ------------------------------------------>
+    <footer class="footer" data-dark>
+        <p>Creado por Bryan Abundis</p>
+        <nav class="social-links">
+            <ul>
+                <li>
+                    <a href="https://github.com/Cired1" target="_blank"><i class="fab fa-github" data-dark></i></a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
